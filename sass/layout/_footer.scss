@@ -1,0 +1,44 @@
+.flickr {
+    background-image: url(../images/flickr.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vimeo {
+    background-image: url(../images/vimeo.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pinterest {
+    background-image: url(../images/pinterest.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.twitter {
+    background-image: url(../images/twitter.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.ri {
+    color: #999;
+    display: flex;
+}
+.ri span {
+    font-weight: 700;
+    color: #333;
+}
