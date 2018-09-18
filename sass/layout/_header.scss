@@ -12,92 +12,96 @@
         display: flex;
         justify-content: space-between;
     }
-    .page-logo {
-        display: flex;
-        align-items: center;
+}
+.page-logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    &__link {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $color-white;
+        text-decoration: none;
+        span {
+            color: $color-main-hover;
+        }
+    }
+}
+.page-nav {
+    &__list {
         margin: 0;
-        &__link {
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+        }
+        a {
             font-size: 14px;
             text-transform: uppercase;
-            color: #fff;
+            color: $color-white;
             text-decoration: none;
-            span {
-                color: $color-main-hover;
-            }
+            font-weight: bold;
+            padding: 0 10px;
+            line-height: 40px;
+            display: block;
         }
     }
-    .page-nav {
-        &__list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
+}
+.page-nav__sublist {
+    display: none;
+    transition: 0.4s opacity;
+    visibility: none;
+    opacity: 0;
+    padding: 10px 0;
+    margin: 0;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    transform: translate(-50%, 0);
 
-            li {
-                display: inline-block;
-                text-decoration: none;
-                position: relative;
-            }
-            a {
-                font-size: 14px;
-                text-transform: uppercase;
-                color: #fff;
-                text-decoration: none;
-                font-weight: bold;
-                padding: 0 10px;
-                line-height: 40px;
-                display: block;
-            }
-            li:hover .page-nav__sublist {
-                display: block;
-            }
-        }
-        &__sublist {
-            transition: 0.4s opacity;
-            display: none;
-            padding: 10px 0;
-            margin: 0;
-            background-color: black;
-            position: absolute;
-            left: 50%;
-            top: 55px;
-            transform: translate(-50%, 0);
-            &:hover {
-                display: block;
-            }
-            &::before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 0);
-                top: -20px;
-                display: block;
-                width: 0;
-                height: 0;
-                border: 10px solid transparent;
-                border-bottom-color: black;
-            }
-            &::after {
-                content: "";
-                background: transparent;
-                position: absolute;
-                left: 0;
-                top: -15px;
-                width: 100%;
-                height: 15px;
-            }
-
-            li {
-                display: block;
-            }
-            a {
-                text-transform: none;
-                line-height: 2em;
-                font-weight: normal;
-                padding: 0 20px;
-            }
-            a:hover {
-                color: $color-main-hover;
-            }
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: -20px;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: black;
     }
+    &::after {
+        content: "";
+        background: transparent;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: -15px;
+        width: 100%;
+        height: 15px;
+    }
+
+    li {
+        display: block;
+    }
+    a {
+        text-transform: none;
+        line-height: 2em;
+        font-weight: normal;
+        padding: 0 20px;
+    }
+    a:hover {
+        color: $color-main-hover;
+    }
+}
+.show:hover > ul,
+.show ul:hover {
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }

@@ -1,0 +1,21 @@
+.btn {
+    padding: 5px 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: $color-white;
+    font-size: 20px;
+    background: $color-main;
+    font-weight: 200;
+    &__div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__send {
+        background-color: $color-main;
+        padding: 20px 100px;
+        color: $color-white;
+        font-size: 40px;
+        font-weight: 600;
+    }
+}

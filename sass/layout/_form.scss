@@ -59,53 +59,41 @@
     font-size: 20px;
     color: #aaa;
     display: flex;
-}
-.form-checkbox input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 48px;
-    opacity: 0;
-    height: 48px;
-}
-.form-checkbox span {
-    flex-shrink: 0;
-    margin-right: 10px;
-    width: 48px;
-    height: 48px;
-    border: 1px solid $color-main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form-checkbox span:before {
-    content: "";
-    background-image: url(../images/form_ok.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 48px;
-    height: 48px;
-    display: block;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: 0.5s all;
-}
-.form-checkbox input:checked + span::before {
-    opacity: 1;
-    transform: scale(1);
-}
-.form-checkbox input:focus + span {
-    box-shadow: 0 0 0 2px $color-main;
-}
-.btn {
-    background: $color-main;
-}
-.btn-wyslij {
-    background-color: $color-main;
-    padding: 20px 100px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    color: white;
-    font-size: 40px;
-    font-weight: 600;
+    & input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 48px;
+        opacity: 0;
+        height: 48px;
+    }
+    & span {
+        flex-shrink: 0;
+        margin-right: 10px;
+        width: 48px;
+        height: 48px;
+        border: 1px solid $color-main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    & span:before {
+        content: "";
+        background-image: url(../images/form_ok.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 48px;
+        display: block;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: 0.5s all;
+    }
+    & input:checked + span::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+    & input:focus + span {
+        box-shadow: 0 0 0 2px $color-main;
+    }
 }

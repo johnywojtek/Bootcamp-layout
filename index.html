@@ -25,8 +25,8 @@
 
       <nav class="page-nav">
         <ul class="page-nav__list">
-          <li>
-            <a class="" href="/">O firmie</a>
+          <li class="show">
+            <a href="#">O firmie</a>
             <ul class="page-nav__sublist">
               <li>
                 <a href="">Aktualności</a>
@@ -52,23 +52,25 @@
 
   <div class="main-slider-bg">
     <div class="container">
-      <div class="banner">
-        <button class="baner-prev">
+      <div class="baner">
+        <button class="baner__prev">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
         </button>
-        <button class="baner-next">
+        <button class="baner__next">
           <i class="fa fa-angle-right" aria-hidden="true"></i>
 
         </button>
-        <div class="baner-slides">
-          <div class="baner-slide baner-slide-active">
-            <div class="left-slide">
-              <img src="images/black_chair.png" alt="">
+        <div class="baner__slides">
+          <div class="baner__slide">
+            <div>
+              <img class="baner__slide__photo" src="images/black_chair.png" alt="chair">
             </div>
-            <div class="right-slide">
-              <h3>Sit
-                <span>On</span> Chair</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laboriosam pariatur fugit amet, dolorem
+            <div class="baner__slide__cont">
+              <h3 class="baner__slide__title">SIT
+                <span class="main-color">ON </span>OUR <span class="main-color"> CHAIR</span></h3>
+              <p class="baner__slide__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laboriosam
+                pariatur
+                fugit amet, dolorem
                 quidem
                 facilis, magni repellat a explicabo fuga doloremque nostrum qui molestiae inventore deserunt.
                 Recusandae,
@@ -76,18 +78,6 @@
               <button class="btn">Zobacz więcej</button>
             </div>
           </div>
-          <div class="baner-slide ">
-            <div class="left-slide">
-              <img src="images/black_chair.png" alt="">
-            </div>
-            <div class="right-slide">
-              <h3>Sit
-                <span>On</span> Chair</h3>
-              <p>fwafawfawfaw.</p>
-              <button class="btn">Zobacz więcej</button>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -144,7 +134,7 @@
             <li class="list-items">Zakup towaru + dowóz</li>
             <li class="list-items">Serwis</li>
           </ul>
-          <div class="btn-div">
+          <div class="btn__div">
             <button class="btn">Dołącz</button>
           </div>
         </div>
@@ -165,7 +155,7 @@
             <li class="list-items">Serwis</li>
             <li class="list-items">Gwarancja 5 lat</li>
           </ul>
-          <div class="btn-div">
+          <div class="btn__div">
             <button class="btn">Dołącz</button>
           </div>
         </div>
@@ -187,7 +177,7 @@
             <li class="list-items">Gwarancja 6 lat</li>
             <li class="list-items">Porady projektanta</li>
           </ul>
-          <div class="btn-div">
+          <div class="btn__div">
             <button class="btn">Dołącz</button>
           </div>
         </div>
@@ -225,7 +215,7 @@
               Zgadzam sie na przetwarzanie danych osobowych
             </label>
           </div>
-          <button class="btn-wyslij">Wyślij</button>
+          <button class="btn__send">Wyślij</button>
         </div>
 
       </form>
