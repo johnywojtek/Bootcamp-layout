@@ -51,6 +51,7 @@
     }
 }
 .page-nav__sublist {
+    z-index: 900;
     display: none;
     transition: 0.4s opacity;
     visibility: none;
