@@ -4,41 +4,15 @@
 .baner {
     height: 500px;
     display: flex;
+    position: relative;
     &__photo {
         width: 1200px;
     }
-    &__prev,
-    &__next {
-        width: 100px;
-        border: 0;
-        background: none;
-        font-size: 70px;
-        color: $color-main;
-        cursor: pointer;
-        transition: 0.5s all;
-        &:focus,
-        &:focus {
-            outline: none;
-        }
-        &:hover,
-        &:hover {
-            color: $color-main-hover;
-        }
-        &:active,
-        &:active {
-            transform: scale(1.2);
-        }
-    }
 }
 
-.baner__next {
-    order: 1;
-}
-.baner__slides {
+.baner__slide {
     flex-grow: 1;
     position: relative;
-}
-.baner__slide {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,18 @@
+.section-title-sm {
+    opacity: 1;
+    transition: 0.4s opacity;
+    font-size: 15px;
+    display: block;
+    width: 150px;
+    font-weight: 600;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        background-color: $color-main;
+        height: 8px;
+        width: 150px;
+    }
+}
