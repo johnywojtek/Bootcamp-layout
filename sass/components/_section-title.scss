@@ -16,3 +16,42 @@
         width: 320px;
     }
 }
+.section-title-sm {
+    opacity: 1;
+    transition: 0.4s opacity;
+    font-size: 15px;
+    display: block;
+    width: 150px;
+    font-weight: 600;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        background-color: $color-main;
+        height: 8px;
+        width: 150px;
+    }
+}
+.section-title-pm {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 2;
+    top: 151px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 330px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.473);
+    &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background-color: $color-main;
+        height: 8px;
+        width: 130px;
+    }
+}

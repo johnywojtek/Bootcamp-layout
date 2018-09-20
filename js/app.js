@@ -1,34 +1,54 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const listArrow = document.querySelectorAll(".list_arrow");
-    const color = document.querySelector(".color");
+    const listArrow = document.querySelector(".list_arrow");
+    const li = document.querySelectorAll(".list_panel li");
+    const listPanel = document.querySelector(".list_panel");
+    const listLabel = document.querySelector(".list_label");
+    const color = document.querySelector(".chair");
     const transp = document.querySelector(".transport-value");
-    const colorVal = document.querySelector(".color-value");
+    const chairValue = document.querySelector(".chair-value");
     const transport = document.querySelector("#transport");
     const sum = document.querySelector(".sum");
+    const test = document.querySelector(".checkbox label");
+    let arr = [0];
 
-    listArrow.forEach(item =>
-        item.addEventListener("click", function(e) {
-            if (e.srcElement.nextElementSibling.style.display !== "block") {
-                e.srcElement.nextElementSibling.style.display = "block";
-            } else {
-                e.srcElement.nextElementSibling.style.display = "none";
-            }
-        })
-    );
-    const li = document.querySelectorAll(".list_panel li");
+    let count = () => {
+        let reduce = arr.reduce(function(total, item) {
+            return total + item;
+        });
+
+        sum.innerHTML = `${reduce} PLN`;
+    };
+
+    listArrow.addEventListener("click", function(e) {
+        if (listPanel.style.display !== "block") {
+            listPanel.style.display = "block";
+        } else {
+            listPanel.style.display = "none";
+        }
+    });
+
     li.forEach(e =>
         e.addEventListener("click", function() {
-            console.log(e.innerHTML);
             color.innerHTML = e.innerHTML;
-            colorVal.innerHTML = `cena: ${e.dataset.price}`;
-            sum.innerHTML = e.dataset.price;
+            chairValue.innerHTML = `cena: ${e.dataset.price}`;
+
+            arr.shift();
+            arr.unshift(Number(e.dataset.price));
+            test.style.display = "block";
+            listLabel.innerHTML = e.innerHTML;
+            listPanel.style.display = "none";
+            count();
         })
     );
-    transport.addEventListener("click", function(e) {
+    transport.addEventListener("change", function(e) {
         if (!transp.innerHTML) {
-            transp.innerHTML = `+ transport: ${transport.dataset.trans}`;
+            transp.innerHTML = `+ transport: ${transport.dataset.trans} `;
+            arr.push(Number(transport.dataset.trans));
         } else {
             transp.innerHTML = "";
+            arr.pop();
         }
+
+        count();
     });
 });

@@ -28,3 +28,9 @@ img {
 .main-color {
     color: $color-main;
 }
+.align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
