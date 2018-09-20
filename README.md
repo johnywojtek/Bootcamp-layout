@@ -8,7 +8,7 @@
 
 ## Live
 
-LINK : 
+LINK : https://johnywojtek.github.io/Bootcamp-layout/
 
 
 
