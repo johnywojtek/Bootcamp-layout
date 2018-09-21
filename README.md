@@ -1,4 +1,4 @@
-# Layout from bootcamp with functionality
+# Layout with small functionality
 
 ## Built With
 
