@@ -1,4 +1,4 @@
-# Layout with functionalities
+# Layout with small functionalities
 
 ## Built With
 
