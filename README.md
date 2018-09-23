@@ -8,7 +8,7 @@
 
 ## Live
 
-LINK : https://johnywojtek.github.io/Bootcamp-layout/
+LINK : https://johnywojtek.github.io/Sit-on-Chair-Layout/
 
 
 
